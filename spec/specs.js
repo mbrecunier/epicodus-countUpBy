@@ -7,10 +7,6 @@ describe('countUpBy', function() {
     expect(countUpBy(35, 5)).to.equal('5, 10, 15, 20, 25, 30, 35');
   });
 
-  it('will handle string input and try to parseInt', function() {
-    expect(countUpBy('30', '5')).to.equal('5, 10, 15, 20, 25, 30');
-  });
-
   it('will handle counting two negative numbers', function() {
     expect(countUpBy(-5, -30)).to.equal('-5, -10, -15, -20, -25, -30');
   });
@@ -32,8 +28,12 @@ describe('countUpBy', function() {
   });
 });
 
-describe('roundToHundredth', function() {
+describe('getNumber', function() {
   it('will round to the nearest hundredth', function() {
-    expect(roundToHundredth(1.245)).to.equal(1.25);
+    expect(getNumber(1.245)).to.equal(1.25);
+  });
+
+  it('will handle string input and try to parseInt', function() {
+    expect(countUpBy('30', '5')).to.equal('5, 10, 15, 20, 25, 30');
   });
 });
