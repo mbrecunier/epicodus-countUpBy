@@ -26,4 +26,8 @@ describe('countUpBy', function() {
   it('will ignore strings that contain no numbers', function() {
     expect(countUpBy('bla', 'bla')).to.equal('');
   });
+
+  it('will accept floats and count with them', function() {
+    expect(countUpBy(1.5, 7)).to.equal('1.5, 3, 4.5, 6');
+  });
 });
