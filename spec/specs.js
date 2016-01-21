@@ -10,4 +10,8 @@ describe('countUpBy', function() {
   it('will handle string input and try to parseInt', function() {
     expect(countUpBy('30', '5')).to.equal('5, 10, 15, 20, 25, 30');
   });
+
+  it('will handle counting two negative numbers', function() {
+    expect(countUpBy(-5, -30)).to.equal('-5, -10, -15, -20, -25, -30');
+  });
 });
