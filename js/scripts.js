@@ -12,6 +12,11 @@ var countUpBy = function(countBy, countTo) {
       }
     }
   } else {
+    if (countBy > 0) {
+      countBy = -countBy;
+    } else if (countTo > 0) {
+      countTo = -countTo;
+    }
     if (countBy < countTo) {
       countBy = [countTo, countTo = countBy][0];
     }
