@@ -1,5 +1,4 @@
 var getNumber = function(userInput) {
-
   return Math.round(parseFloat(userInput) * 100)/100;
 };
 
@@ -14,7 +13,7 @@ var countUpBy = function(countBy, countTo) {
       }
       for (var index = countBy; index <= countTo; index += countBy) {
         if(index<=countTo) {
-          output.push(index);
+          output.push(getNumber(index));
         }
       }
     } else {
@@ -28,7 +27,7 @@ var countUpBy = function(countBy, countTo) {
       }
       for (var index = countBy; index >= countTo; index += countBy) {
         if(index>=countTo) {
-          output.push(index);
+          output.push(getNumber(index));
         }
       }
     }
