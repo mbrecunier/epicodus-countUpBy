@@ -26,6 +26,10 @@ describe('countUpBy', function() {
   it('will accept floats and count with them', function() {
     expect(countUpBy(1.5, 7)).to.equal('1.5, 3, 4.5, 6');
   });
+
+  it('will ignore blank input', function() {
+    expect(countUpBy('', '')).to.equal('');
+  });
 });
 
 describe('getNumber', function() {
