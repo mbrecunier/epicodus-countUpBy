@@ -1,7 +1,7 @@
 var countUpBy = function(countBy, countTo) {
   var output = [];
-  countBy = parseInt(countBy);
-  countTo = parseInt(countTo);
+  countBy = parseFloat(countBy);
+  countTo = parseFloat(countTo);
   if(countBy > 0 && countTo > 0) {
     if (countBy > countTo) {
       countBy = [countTo, countTo = countBy][0];
