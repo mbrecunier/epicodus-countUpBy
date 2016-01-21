@@ -22,4 +22,8 @@ describe('countUpBy', function() {
   it('will treat both numbers as negative when one number is positive and one number is negative', function() {
     expect(countUpBy(-30, 5)).to.equal('-5, -10, -15, -20, -25, -30');
   })
+
+  it('will ignore strings that contain no numbers', function() {
+    expect(countUpBy('bla', 'bla')).to.equal('');
+  });
 });
