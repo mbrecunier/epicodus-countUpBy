@@ -33,3 +33,10 @@ var countUpBy = function(countBy, countTo) {
   }
   return output.join(', ');
 }
+
+$(document).ready(function() {
+  $('form').submit(function(event) {
+    $('.output').text(countUpBy($('#num1').val(), $('#num2').val()));
+    event.preventDefault();
+  });
+});
