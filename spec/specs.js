@@ -30,4 +30,8 @@ describe('countUpBy', function() {
   it('will accept floats and count with them', function() {
     expect(countUpBy(1.5, 7)).to.equal('1.5, 3, 4.5, 6');
   });
+
+  it('will round to the nearest hundredth', function() {
+    expect(countUpBy(1.245, 7)).to.equal('1.25, 2.5, 3.75, 5, 6.25');
+  });
 });
